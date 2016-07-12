@@ -1,8 +1,6 @@
-/*
 img {
   width: 100%;
 }
-*/
 
 
 /* clearfix */
@@ -65,11 +63,4 @@ body { font-family: sans-serif; }
 
 
 .grid-item {
-  float: left;
-  background: #45F;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;
-  font-size: 3em;
-  text-align: center;
 }

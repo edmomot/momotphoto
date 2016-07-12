@@ -16,6 +16,43 @@
 
     <div id="filenames" class="grid">
       <div class="grid-sizer"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115616-0116.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115617-0129.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115619-0143.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115632-0159.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115644-0171.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115717-0207.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115733-0223.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115801-0253.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115810-0262.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115827-0279.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115907-0320.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115913-0325.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115921-0333.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-115954-0377.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-120013-0402.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132559-0488.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132607-0522.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132611-0537.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132617-0552.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132619-0556.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132620-0559.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132623-0565.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132623-0566.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132626-0573.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132636-0590.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132648-0021.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132707-0631.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-132723-0662.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-173747-0682.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-173803-0703.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-173818-0722.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-173829-0737.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-173850-0765.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-174054-0925.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-210413-0979.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-210431-1002.jpg"></div>
+      <div class="grid-item"><img alt="Image" src="\img\20150221-210436-1009.jpg"></div>
     </div>
     
       
@@ -38,29 +75,28 @@
           $("#filenames").toggleClass("card-columns");
         });
         
-        $.get(directory, function(data) 
-        {
-          $('a:contains(jpg)', $(data)).each(function () {
-            $('#filenames').append(
-                '<img class="grid-item" alt="Image" src="' + $(this).attr('href') + '">'
-              );
-          }).then(
-            function() { loadMasonry(); }
-          )
-        });
+//        $.get(directory, function(data) 
+//        {
+//          $('a:contains(jpg)', $(data)).each(function () {
+//            $('#filenames').append(
+//                '<img class="grid-item" alt="Image" src="' + $(this).attr('href') + '">'
+//              );
+//          }).then(
+//            function() { loadMasonry(); }
+//          )
+//        });
         
 
 
       })
       
-      function loadMasonry() {
-        var grid = $('.grid');
-        grid.masonry({
-          itemSelector: '.grid-item',
-          columnWidth: '.grid-sizer',
-          percentPosition: true
-        }).masonry('reload');
-      }
+      var grid = $('.grid');
+      grid.masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+      });
+      
     </script>
     
 
