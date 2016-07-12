@@ -8,14 +8,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <link rel="stylesheet" href="wedding.css">
-    <link rel="stylesheet" href="bootstrap-switch.min.css">
+    <link rel="stylesheet" href="css/wedding.css">
+    <link rel="stylesheet" href="css/bootstrap-switch.min.css">
   </head>
   <body>
     Show as columns <input type="checkbox" id="column-toggle" checked></input>
 
-    <div id="filenames" class='card-columns'>
-
+    <div id="filenames" class="grid">
+      <div class="grid-sizer"></div>
     </div>
     
       
@@ -24,6 +24,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
       
     <script src="bootstrap-switch.min.js"></script>
+  
+    <script src="js/masonry.pkgd.min.js"></script>
   
     <script type="text/javascript">
       var directory = './img';
@@ -40,11 +42,25 @@
         {
           $('a:contains(jpg)', $(data)).each(function () {
             $('#filenames').append(
-                '<div class="card"><div class="card-img"><img alt="Image" src="' + $(this).attr('href') + '"></div></div>'
+                '<img class="grid-item" alt="Image" src="' + $(this).attr('href') + '">'
               );
-          })
+          }).then(
+            function() { loadMasonry(); }
+          )
         });
+        
+
+
       })
+      
+      function loadMasonry() {
+        var grid = $('.grid');
+        grid.masonry({
+          itemSelector: '.grid-item',
+          columnWidth: '.grid-sizer',
+          percentPosition: true
+        }).masonry('reload');
+      }
     </script>
     
 
