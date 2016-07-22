@@ -9,11 +9,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="css/wedding.css">
-    <link rel="stylesheet" href="css/bootstrap-switch.min.css">
+    
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="photoswipe-skin/default-skin.css">
   </head>
   <body>
-    Show as columns <input type="checkbox" id="column-toggle" checked></input>
-
     <div id="filenames" class="grid">
       <div class="grid-sizer"></div>
       <div class="grid-item"><img alt="Image" src="\img\20150221-115616-0116.jpg"></div>
@@ -59,8 +59,7 @@
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-      
-    <script src="bootstrap-switch.min.js"></script>
+
   
     <script src="js/masonry.pkgd.min.js"></script>
   
@@ -68,12 +67,7 @@
       var directory = './img';
       
       $(document).ready(function () 
-      {        
-        $("#column-toggle").bootstrapSwitch();
-
-        $("#column-toggle").on('switchChange.bootstrapSwitch', function(event, state) {
-          $("#filenames").toggleClass("card-columns");
-        });
+      {
         
 //        $.get(directory, function(data) 
 //        {
