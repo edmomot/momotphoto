@@ -151,32 +151,43 @@
         // few-pixel gap below each image otherwise on load.  
         // Fine after resize.
         window.dispatchEvent(new Event('resize'));
+      
+        var items = [];
         
-        var items = [
-          {
-            src: '/img/20150221-115616-0116.jpg',
-            w: 600,
-            h: 400,
-            title: 'First image'
-          },
-          {
-            src: '/img/20150221-115617-0129.jpg',
-            w: 400,
-            h: 600,
-            title: 'Second image'
-          },
-          {
-            src: '/img/20150221-115619-0143.jpg',
-            w: 600,
-            h: 400,
-            title: 'Third image'
-          }
-        ]
+        $(".grid-item").each(function(index) { 
+          items.push({
+            src: this.getAttribute("src"),
+            w: this.naturalWidth,
+            h: this.naturalHeight,
+            title: "Picture number " + index
+          })
+        });
+        
+//        var items = [
+//          {
+//            src: '/img/20150221-115616-0116.jpg',
+//            w: 600,
+//            h: 400,
+//            title: 'First image'
+//          },
+//          {
+//            src: '/img/20150221-115617-0129.jpg',
+//            w: 400,
+//            h: 600,
+//            title: 'Second image'
+//          },
+//          {
+//            src: '/img/20150221-115619-0143.jpg',
+//            w: 600,
+//            h: 400,
+//            title: 'Third image'
+//          }
+//        ]
         
         // Initialize photoswipe
         $(".grid-item").on('click', function() {
           var pswp_element = document.querySelectorAll('.pswp')[0];
-          var options = { index: this.dataset.pswpIndex };
+          var options = { index: parseInt(this.dataset.pswpIndex) };
           var gallery = new PhotoSwipe( pswp_element, PhotoSwipeUI_Default, items, options )
           gallery.init();
         })
