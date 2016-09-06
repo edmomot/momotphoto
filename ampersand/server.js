@@ -29,6 +29,7 @@ app.use(serveStatic(fixPath('public')));
 if (config.isDev) {
     app.use(serveStatic(fixPath('test/assets')));
     app.use(serveStatic(fixPath('test/spacemonkey')));
+    app.use(serveStatic(fixPath('test/cases')));
 }
 
 app.use(cookieParser());
@@ -55,6 +56,8 @@ app.delete('/api/people/:id', api.delete);
 app.put('/api/people/:id', api.update);
 app.post('/api/people', api.add);
 
+app.get('/api/directory', api.directory);
+app.get('/api/directoryText', api.directory);
 
 // -----------------
 // Enable the functional test site in development

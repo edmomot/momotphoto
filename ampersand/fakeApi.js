@@ -1,5 +1,5 @@
 var _ = require('lodash');
-
+var dirJson = require('./watch/directory-to-json');
 
 var people = [
     {
@@ -74,4 +74,15 @@ exports.update = function (req, res) {
     if (found) _.extend(found, req.body);
     res.status(found ? 200 : 404);
     res.send(found);
+};
+
+
+exports.directory = function (req, res) {
+    var d = new dirJson('./stuff')
+    res.send(d.getAllFiles());
+};
+
+exports.directoryText = function (req, res) {
+    var d = new dirJson('./stuff')
+    res.send(d.getAllTextFiles());
 };
