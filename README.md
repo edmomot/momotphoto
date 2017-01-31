@@ -1,2 +1,0 @@
-# momotphoto
-Site redesign
