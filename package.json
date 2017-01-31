@@ -1,0 +1,26 @@
+{
+  "name": "momotphoto",
+  "version": "1.0.0",
+  "description": "Photography Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edmomot/momotphoto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edmomot/momotphoto/issues"
+  },
+  "homepage": "https://github.com/edmomot/momotphoto#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "directory-tree": "^1.2.0"
+  }
+}
