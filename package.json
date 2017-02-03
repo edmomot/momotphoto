@@ -21,6 +21,7 @@
     "mocha": "^3.2.0"
   },
   "dependencies": {
-    "directory-tree": "^1.2.0"
+    "directory-tree": "^1.2.0",
+    "exif": "^0.6.0"
   }
 }
