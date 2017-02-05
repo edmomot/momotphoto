@@ -1,7 +1,7 @@
-var chai = require('chai');
-var expect = chai.expect;
-var assert = chai.assert;
-var ExifReader = require('./../src/server/exif-reader');
+let chai = require('chai');
+let expect = chai.expect;
+let assert = chai.assert;
+let ExifReader = require('./../src/server/exif-reader');
 
 let image = './test/mock-directory/bird.jpg';
 let nonexistentFile = './test/mock/directory/NONEXISTENT_FILE.jpg';
@@ -9,7 +9,8 @@ let nonexistentFile = './test/mock/directory/NONEXISTENT_FILE.jpg';
 describe('ExifReader', function() {
 
     it('executes success callback on existing image', function(done) {
-        let onSuccess = function() {
+        let onSuccess = function(data) {
+            console.log(JSON.stringify(data));
             done();
         };
         let onFailure = function() {

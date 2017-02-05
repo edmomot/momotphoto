@@ -1,6 +1,5 @@
-var chai = require('chai');
-var expect = chai.expect;
-var assert = chai.assert;
+let chai = require('chai');
+let expect = chai.expect;
 
 let ExifDataExtractor = require('./../src/server/exif-data-extractor')
 let ExifDataStub = require('./exif-data-stub.json');

@@ -11,15 +11,16 @@
     "ModifyDate": "2016:04:24 23:01:38",
     "Artist": "Ed Momot",
     "Copyright": "Copyright 2016 Ed Momot",
-    "ExifOffset": 264
+    "ExifOffset": 2386,
+    "XPTitle": [ 98, 0, 105, 0, 114, 0, 100, 0, 32, 0, 111, 0, 110, 0, 32, 0, 114, 0, 101, 0, 101, 0, 100, 0, 115, 0, 0, 0]
   },
   "thumbnail": {
     "Compression": 6,
     "XResolution": 72,
     "YResolution": 72,
     "ResolutionUnit": 2,
-    "ThumbnailOffset": 918,
-    "ThumbnailLength": 10734
+    "ThumbnailOffset": 5140,
+    "ThumbnailLength": 8043
   },
   "exif": {
     "ExposureTime": 0.0008,
@@ -30,12 +31,7 @@
     "RecommendedExposureIndex": 1000,
     "ExifVersion": {
       "type": "Buffer",
-      "data": [
-        48,
-        50,
-        51,
-        48
-      ]
+      "data": [48, 50, 51, 48 ]
     },
     "DateTimeOriginal": "2016:04:24 15:43:11",
     "CreateDate": "2016:04:24 15:43:11",
