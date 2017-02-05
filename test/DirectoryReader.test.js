@@ -1,9 +1,9 @@
 let chai = require('chai');
 let expect = chai.expect;
-let DirectoryReader = require('./../src/server/directory-reader');
+let DirectoryReader = require('./../src/server/DirectoryReader');
 
 let nonexistentPath = './NONEXISTENT_DIR';
-let path = './test/mock-directory';
+let path = './test/mocks';
 
 describe('DirectoryReader', function() {
     it('should return null on a nonexistent directory', function() {

@@ -1,18 +1,17 @@
-var ExifImage = require('exif').ExifImage;
+let ExifImage = require('exif').ExifImage;
 
 let ExifReader = {
     read: function(path, onSuccess, onFailure) {
         try {
             new ExifImage({ image : path }, function (error, exifData) {
                 if (error) {
-                    console.log('Error: ' + error.message);
-                    onFailure();
+                    onFailure(error);
+                } else {
+                    ExifReader.onSuccess(exifData, onSuccess);
                 }
-                ExifReader.onSuccess(exifData, onSuccess);
             });
         } catch (error) {
-            console.log('Error: ' + error.message);
-            onFailure();
+            onFailure(error);
         }
     },
     onSuccess: function(exifData, onSuccess) {

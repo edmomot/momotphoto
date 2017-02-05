@@ -1,4 +1,4 @@
-let DirectoryReader = require('./directory-reader');
+let DirectoryReader = require('./DirectoryReader');
 
 let AlbumDataBuilder = {
     build: function(directoryTree) {
