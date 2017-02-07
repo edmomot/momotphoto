@@ -1,17 +1,22 @@
-let DirectoryReader = require('./DirectoryReader');
-
 let AlbumDataBuilder = {
-    build: function(directoryTree) {
-        return directoryTree.children.map(function(child) {
-            if (DirectoryReader.isDirectory(child)) {
-                return AlbumDataBuilder.buildDirectory(child);
-            } else {
-                return AlbumDataBuilder.buildFile(child);
-            }
-        });
+    init: function(directoryReader, jsonFileReader) {
+        this.DirectoryReader = directoryReader;
+        this.JsonFileReader = jsonFileReader;
     },
-    buildDirectory: function(directoryTreeDirectory) {
+    build: function(directoryTree) {
+        let root = {};
 
+
+
+
+    },
+    buildDirectory: function(directoryTreeDirectory, node) {
+        if (this.DirectoryReader.isDirectory(directoryTreeDirectory)) {
+
+            AlbumDataBuilder.buildDirectory(directoryTreeDirectory);
+        } else {
+            return AlbumDataBuilder.buildFile(child);
+        }
     },
     buildFile: function(directoryTreeFile) {
         if (directoryTreeFile.extension.toLowerCase() === '.json')
@@ -23,14 +28,19 @@ let AlbumDataBuilder = {
         throw 'Error building file, expecting only JSON and JPG files'
             + 'but read file ' + directoryTreeFile.path;
     },
-    buildJson: function(directoryTreeFile) {
-
+    buildJson: function(directoryTreeFile, node, onSuccess) {
+        this.JsonFileReader.read(directoryTreeFile.path, function(data) {
+            node.push(data);
+            onSuccess(node);
+        }, function(error) {
+            throw error;
+        });
     },
-    buildJpg: function(directoryTreeFile) {
-        return {
+    buildJpg: function(directoryTreeFile, node) {
+        node.push({
             name: directoryTreeFile.name,
             path: directoryTreeFile.path
-        };
+        });
     }
 };
 
