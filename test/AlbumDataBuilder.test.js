@@ -21,7 +21,7 @@ describe('AlbumDataBuilder', function() {
 
     it('should append a JSON node object with the file contents', function(done) {
         let dir = {name: "bah", path: "humbug"};
-        let currentNode = [];
+        let currentNode = {};
 
         let mockJson = {
             some: "property",
@@ -34,12 +34,17 @@ describe('AlbumDataBuilder', function() {
 
         AlbumDataBuilder.init(null, mockJsonFileReader);
         AlbumDataBuilder.buildJson(dir, currentNode, function(node) {
-            expect(node).to.have.lengthOf(1);
-            expect(node[0].some).to.equal("property");
-            expect(node[0].and).to.equal("another one");
+            expect(node.description.some).to.equal("property");
+            expect(node.description.and).to.equal("another one");
             expect(node).to.eql(currentNode);
             done();
         });
+    });
+
+    it('should differentiate between a JSON and a JPG file', function() {
+
+        AlbumDataBuilder.init(null, mockJsonFileReader);
+
     });
 
 });
