@@ -1,55 +1,67 @@
+let Promise = require('promise');
+
 let AlbumDataBuilder = {
     init: function(directoryReader, jsonFileReader) {
-        this.DirectoryReader = directoryReader;
-        this.JsonFileReader = jsonFileReader;
+        AlbumDataBuilder.DirectoryReader = directoryReader;
+        AlbumDataBuilder.JsonFileReader = jsonFileReader;
     },
+
     build: function(directoryTree) {
         let root = {};
-
-
-
-
-    },
-    buildNode: function(directoryTreeDirectory, node) {
-        if (this.DirectoryReader.isDirectory(directoryTreeDirectory)) {
-            node.albums = [];
-            directoryTreeDirectory.children.forEach(function(childDirectory) {
-                AlbumDataBuilder.buildNode(directoryTreeDirectory, node);
-            });
-
-
-        } else {
-            return AlbumDataBuilder.buildFile(child);
-        }
-    },
-    buildFile: function(directoryTreeFile, node, onSuccess) {
-        if (directoryTreeFile.extension.toLowerCase() === '.json') {
-            buildJson(directoryTreeFile, node, onSuccess);
-        } else if (directoryTreeFile.extension.toLowerCase() === '.jpg') {
-            if (!node.images) {
-                node.images = [];
-            }
-
-            AlbumDataBuilder.buildJpg(directoryTreeFile, node.images, onSuccess);
-        } else {
-           throw 'Error building file, expecting only JSON and JPG files'
-            + 'but read file: ' + directoryTreeFile.path;
-        }
-    },
-    buildJson: function(directoryTreeFile, node, onSuccess) {
-        this.JsonFileReader.read(directoryTreeFile.path, function(data) {
-            node.push({ description: data });
-            if (onSuccess) onSuccess(node);
-        }, function(error) {
-            throw error;
+        return new Promise(function(resolve, reject) {
+            AlbumDataBuilder.buildNode(directoryTree, root, root, resolve, reject);
         });
     },
-    buildJpg: function(directoryTreeFile, node, onSuccess) {
-        node.push({
+
+    buildNode: function(directoryTreeDirectory, root, node, resolve, reject) {
+        if (AlbumDataBuilder.DirectoryReader.isDirectory(directoryTreeDirectory)) {
+            if (node.albums === undefined) node.albums = [];
+            let newAlbumNode = {
+                name: directoryTreeDirectory.name,
+                path: directoryTreeDirectory.path
+            };
+            node.albums.push(newAlbumNode);
+
+            let childrenBuilt = Promise.all(directoryTreeDirectory.children.map(function (childDirectory) {
+                return new Promise(function(res, rej) {
+                    AlbumDataBuilder.buildNode(childDirectory, root, newAlbumNode, res, rej);
+                });
+            }));
+
+            childrenBuilt.then(function () {
+                resolve(root);
+            });
+        } else {
+            AlbumDataBuilder.buildFile(directoryTreeDirectory, node, resolve, reject);
+        }
+    },
+
+    buildFile: function(directoryTreeFile, node, resolve, reject) {
+        if (directoryTreeFile.extension.toLowerCase() === '.json') {
+            AlbumDataBuilder.buildJson(directoryTreeFile, node, resolve, reject);
+        } else if (directoryTreeFile.extension.toLowerCase() === '.jpg') {
+            AlbumDataBuilder.buildJpg(directoryTreeFile, node, resolve, reject);
+        } else {
+           throw `Unexpected file extension. Expecting only JSON and JPG files, but read file: ${directoryTreeFile.path}`;
+        }
+    },
+
+    buildJson: function(directoryTreeFile, node, resolve, reject) {
+        AlbumDataBuilder.JsonFileReader.read(directoryTreeFile.path, function(data) {
+            node.description = data;
+            if (resolve) resolve(node);
+        }, function(error) {
+            reject(error);
+        });
+    },
+
+    buildJpg: function(directoryTreeFile, node, resolve, reject) {
+        if (!node.images) node.images = [];
+        node.images.push({
             name: directoryTreeFile.name,
             path: directoryTreeFile.path
         });
-        if (onSuccess) onSuccess(node);
+        if (resolve) resolve(node);
     }
 };
 
