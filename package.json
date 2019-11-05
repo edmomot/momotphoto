@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/edmomot/momotphoto#readme",
   "devDependencies": {
+    "@vue/cli": "^4.0.5",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "mock-require": "^2.0.1"
@@ -25,6 +26,7 @@
     "directory-tree": "^1.2.0",
     "exif": "^0.6.0",
     "fs": "0.0.1-security",
-    "promise": "^7.1.1"
+    "promise": "^7.1.1",
+    "vue": "^2.6.10"
   }
 }
