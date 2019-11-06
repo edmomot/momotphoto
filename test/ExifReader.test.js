@@ -1,7 +1,7 @@
 let chai = require('chai');
 let expect = chai.expect;
 let assert = chai.assert;
-let ExifReader = require('./../src/server/ExifReader');
+let ExifReader = require('../api/ExifReader');
 
 let image = './test/mocks/bird.jpg';
 let nonexistentFile = './test/mocks/NONEXISTENT_FILE.jpg';

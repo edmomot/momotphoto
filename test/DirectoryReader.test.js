@@ -1,6 +1,6 @@
 let chai = require('chai');
 let expect = chai.expect;
-let DirectoryReader = require('./../src/server/DirectoryReader');
+let DirectoryReader = require('../api/DirectoryReader');
 
 let nonexistentPath = './NONEXISTENT_DIR';
 let path = './test/mocks';

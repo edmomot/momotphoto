@@ -6,12 +6,40 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/web/src/components/About.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/src/components/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/src/routes.js" afterDir="false" />
+    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Added basic vue project with routing">
+      <change afterPath="$PROJECT_DIR$/api/AlbumController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/configureApiRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/services/AlbumApiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/services/HttpService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/AlbumDataBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumDataBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ExifDataExtractor.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ExifDataExtractor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ExifReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ExifReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/JsonFileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/JsonFileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AlbumDataBuilder.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/AlbumDataBuilder.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/DirectoryReader.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/DirectoryReader.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ExifDataExtractor.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ExifDataExtractor.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ExifReader.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ExifReader.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/JsonReader.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/JsonReader.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,19 +56,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>buffer</find>
-      <find />
-      <find>var</find>
-      <find>;</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>let</replace>
-      <replace>);</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,18 +78,21 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/web/src/components" />
-    <property name="nodejs.mocha.mocha_node_package_dir" value="R:\Code\momotphoto\node_modules\mocha" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="R:\Code\momotphoto\src\server" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\emomot\Code\momotphoto\src\web\src\components" />
       <recent name="R:\Code\momotphoto\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\emomot\Code\momotphoto\web\" />
+      <recent name="C:\Users\emomot\Code\momotphoto" />
+      <recent name="C:\Users\emomot\Code\momotphoto\api" />
+      <recent name="R:\Code\momotphoto\src\server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -89,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.AlbumDataBuilder">
+  <component name="RunManager" selected="Mocha.test\Album.test.js">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -99,39 +117,10 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="AlbumDataBuilder" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>R:/Code/momotphoto/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/test/AlbumDataBuilder.test.js</test-file>
-      <test-names>
-        <name value="AlbumDataBuilder" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="AlbumDataBuilder.should read nested directories" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/AlbumDataBuilder.test.js</test-file>
-      <test-names>
-        <name value="AlbumDataBuilder" />
-        <name value="should read nested directories" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="test\AlbumDataBuilder.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
       <working-directory>$PROJECT_DIR$</working-directory>
       <pass-parent-env>true</pass-parent-env>
       <ui>bdd</ui>
@@ -140,16 +129,68 @@
       <test-file>$PROJECT_DIR$/test/AlbumDataBuilder.test.js</test-file>
       <method v="2" />
     </configuration>
+    <configuration name="test\Album.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/test/Album.test.js</test-file>
+      <method v="2" />
+    </configuration>
+    <configuration name="test\DirectoryReader.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/test/DirectoryReader.test.js</test-file>
+      <method v="2" />
+    </configuration>
+    <configuration name="test\ExifDataExtractor.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/test/ExifDataExtractor.test.js</test-file>
+      <method v="2" />
+    </configuration>
+    <configuration name="test\ExifReader.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/test/ExifReader.test.js</test-file>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Mocha.test\AlbumDataBuilder.test.js" />
-      <item itemvalue="Mocha.AlbumDataBuilder" />
-      <item itemvalue="Mocha.AlbumDataBuilder.should read nested directories" />
+      <item itemvalue="Mocha.test\ExifReader.test.js" />
+      <item itemvalue="Mocha.test\ExifDataExtractor.test.js" />
+      <item itemvalue="Mocha.test\DirectoryReader.test.js" />
+      <item itemvalue="Mocha.test\Album.test.js" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Mocha.AlbumDataBuilder" />
-        <item itemvalue="Mocha.AlbumDataBuilder.should read nested directories" />
+        <item itemvalue="Mocha.test\Album.test.js" />
         <item itemvalue="Mocha.test\AlbumDataBuilder.test.js" />
+        <item itemvalue="Mocha.test\DirectoryReader.test.js" />
+        <item itemvalue="Mocha.test\ExifDataExtractor.test.js" />
+        <item itemvalue="Mocha.test\ExifReader.test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +207,8 @@
       <workItem from="1485828436610" duration="32412000" />
       <workItem from="1486515641867" duration="7711000" />
       <workItem from="1495399166335" duration="16640000" />
-      <workItem from="1572984049017" duration="4123000" />
+      <workItem from="1572984049017" duration="6276000" />
+      <workItem from="1573054494579" duration="12178000" />
     </task>
     <task id="LOCAL-00001" summary="Recursion and tests working">
       <created>1495421821356</created>
@@ -175,46 +217,33 @@
       <option name="project" value="LOCAL" />
       <updated>1495421821356</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added basic vue project with routing">
+      <created>1572989157923</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572989157923</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="AlbumDataBuilder - 2017.05.21 at 22h 54m 09s.xml">
-      <configuration name="AlbumDataBuilder" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder - 2017.05.21 at 22h 54m 26s.xml">
-      <configuration name="AlbumDataBuilder" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder_should_read_nested_directories - 2017.05.21 at 22h 40m 52s.xml">
-      <configuration name="AlbumDataBuilder.should read nested directories" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder_should_read_nested_directories - 2017.05.21 at 22h 46m 00s.xml">
-      <configuration name="AlbumDataBuilder.should read nested directories" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder_should_read_nested_directories - 2017.05.21 at 22h 46m 27s.xml">
-      <configuration name="AlbumDataBuilder.should read nested directories" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder_should_read_nested_directories - 2017.05.21 at 22h 48m 07s.xml">
-      <configuration name="AlbumDataBuilder.should read nested directories" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder_should_read_nested_directories - 2017.05.21 at 22h 48m 22s.xml">
-      <configuration name="AlbumDataBuilder.should read nested directories" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder_should_read_nested_directories - 2017.05.21 at 22h 52m 07s.xml">
-      <configuration name="AlbumDataBuilder.should read nested directories" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder_should_read_nested_directories - 2017.05.21 at 22h 53m 42s.xml">
-      <configuration name="AlbumDataBuilder.should read nested directories" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="AlbumDataBuilder_should_read_nested_directories - 2017.05.21 at 22h 53m 48s.xml">
-      <configuration name="AlbumDataBuilder.should read nested directories" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Recursion and tests working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recursion and tests working" />
+    <MESSAGE value="Added basic vue project with routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic vue project with routing" />
   </component>
 </project>

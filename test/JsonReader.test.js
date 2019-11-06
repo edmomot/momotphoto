@@ -2,7 +2,7 @@ let chai = require('chai');
 let expect = chai.expect;
 let assert = chai.assert;
 
-let JsonFileReader = require('./../src/server/JsonFileReader');
+let JsonFileReader = require('../api/JsonFileReader');
 
 let jsonFile = './test/mocks/jsonFile.json';
 let nonexistentFile = './test/mock/directory/NONEXISTENT_FILE.jpg';

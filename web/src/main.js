@@ -3,10 +3,13 @@ import App from './App.vue'
 import VueRouter from 'vue-router';
 
 import routes from './routes';
+import AlbumApiService from './services/AlbumApiService';
 
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
+
+var allAlbums = AlbumApiService.getAllAlbums();
 
 const router = new VueRouter({ mode: 'history', routes });
 

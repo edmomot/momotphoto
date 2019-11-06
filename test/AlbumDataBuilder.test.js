@@ -1,6 +1,6 @@
 let chai = require('chai');
 let expect = chai.expect;
-let AlbumDataBuilder = require('./../src/server/AlbumDataBuilder');
+let AlbumDataBuilder = require('../api/AlbumDataBuilder');
 
 let path = './test/mocks';
 
