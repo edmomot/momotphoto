@@ -9,14 +9,6 @@ const albumRootPath = './public/albums';
 
 const albumController = {
     GetAllAlbums: (request, response) => {
-        // AlbumDataBuilder.init(directoryReader, jsonFileReader);
-        //
-        // let dirTree = directoryTree(albumRootPath);
-        //
-        // AlbumDataBuilder.build(dirTree)
-        //     .then(x => response.send(x),
-        //     error => response.status(500).send("Error building directory " + albumRootPath + ': ' + error));
-
         AlbumReader.ReadAllAlbums()
             .then(x => response.send(x),
             error => response.status(500).send('Error building directory : ' + error));

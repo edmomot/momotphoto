@@ -1,6 +1,8 @@
-let fetch = require('fetch');
+const fetch = require('node-fetch');
 
-export function get(apiUrl) {
+function get(apiUrl) {
     return fetch(apiUrl, { method: 'get' })
         .then(response => response.json());
 }
+
+module.exports = { get };

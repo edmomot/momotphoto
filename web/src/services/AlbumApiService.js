@@ -1,6 +1,6 @@
 const HttpService = require('./HttpService');
 
-const rootApiUrl = 'api';
+const rootApiUrl = '/api';
 const allAlbumsApiUrl = rootApiUrl + '/album';
 
 export default {

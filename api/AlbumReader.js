@@ -22,18 +22,18 @@ function transformRecursively(rootNode, transformNode) {
     return transformNode(rootNode);
 }
 
-function transformImage(image) {
-    return {
-        name: image.name,
-        url: convertPathToUrl(image.path)
-    }
-}
-
 function transformAlbum(album) {
     return {
         name: album.name,
         url: (album.path ? convertPathToUrl(album.path) : undefined),
         images: album.images ? album.images.map(transformImage) : undefined
+    }
+}
+
+function transformImage(image) {
+    return {
+        name: image.name,
+        url: convertPathToUrl(image.path)
     }
 }
 
