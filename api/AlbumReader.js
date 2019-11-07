@@ -38,7 +38,7 @@ function transformImage(image) {
 }
 
 function convertPathToUrl(path) {
-    return path
+    return '/' + path
         .split('\\')
         .filter(x => x !== '..')
         .filter(x => x !== 'public')
