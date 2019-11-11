@@ -7,4 +7,4 @@ function configureApiRoutes(app) {
     app.get('/api/album', albumController.GetAllAlbums)
 }
 
-module.exports = { configureApiRoutes }
+module.exports = { configureApiRoutes };

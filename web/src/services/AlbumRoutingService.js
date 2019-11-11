@@ -1,14 +1,14 @@
 import Album from '../components/Album';
 
 function AlbumRoutes(albums) {
-    return AlbumRoutesRecursive(albums);
+    return albums.flatMap(AlbumRoutesRecursive);
 }
 
 function AlbumRoutesRecursive(album) {
     if (album.albums) {
-        // if (!album.url) {
-        //     return album.albums.flatMap(AlbumRoutesRecursive);
-        // }
+        if (!album.name) {
+            return album.albums.flatMap(AlbumRoutesRecursive);
+        }
 
         return [
             singleAlbumRoute(album),

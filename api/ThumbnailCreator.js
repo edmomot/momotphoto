@@ -10,8 +10,6 @@ function allThumbnailSizesRegex() {
 }
 
 function createMissingAlbumThumbnails(albumRootPath) {
-    console.log(path.resolve(albumRootPath));
-
     albumReader.ReadAllAlbums(albumRootPath, allThumbnailSizesRegex()).then(albums => {
         for (const album of flattenedAlbums(albums)) {
             console.log('album thumbnails being created for ' + album.name);
@@ -63,12 +61,7 @@ function createDirectoryIfMissing(directory) {
 }
 
 function fullPath(pathRelativeToFile) {
-    console.log('relative: ' + pathRelativeToFile);
-
-    const absolute = path.resolve(pathRelativeToFile);
-    console.log('absolute: ' + absolute);
-
-    return absolute;
+    return path.resolve(pathRelativeToFile);
 }
 
 function albumThumbnailSubFolder(thumbnailSize, album) {

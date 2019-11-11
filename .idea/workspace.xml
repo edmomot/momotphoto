@@ -6,33 +6,12 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Thumbnail generation">
+    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/AlbumReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ApiRouteConfiguration.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApiRouteConfiguration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/ThumbnailCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ThumbnailCreator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ThumbnailCreator.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/1-20181215-162009-13-Pano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/10-20181215-171255-58-Pano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/11-20181215-172024-63.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/12-20181215-204639-66-Pano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/13-20181215-204647-71-Pano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/14-20181215-204936-96.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/15-20181215-205443-99.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/16-20181216-140059-103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/17-20181216-140209-106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/18-20181216-140349-107.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/19-20181216-203150-110.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/2-20181215-162038-14-Pano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/20-20181216-203609-122.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/21-20181216-204048-124.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/3-20181215-162219-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/4-20181215-165110-32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/5-20181215-165215-34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/6-20181215-170224-48.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/7-20181215-170638-50.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/8-20181215-170813-52.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/9-20181215-171020-53-Pano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/description.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +190,7 @@
       <workItem from="1572984049017" duration="6276000" />
       <workItem from="1573054494579" duration="13864000" />
       <workItem from="1573137417085" duration="25132000" />
-      <workItem from="1573248359007" duration="9459000" />
+      <workItem from="1573248359007" duration="11026000" />
     </task>
     <task id="LOCAL-00001" summary="Recursion and tests working">
       <created>1495421821356</created>
@@ -262,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573488300749</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Cleanup">
+      <created>1573488898695</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573488898695</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +275,8 @@
     <MESSAGE value="Added routing to dynamic albums" />
     <MESSAGE value="Images appear on album page" />
     <MESSAGE value="Thumbnail generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Thumbnail generation" />
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

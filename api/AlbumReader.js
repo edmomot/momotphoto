@@ -5,17 +5,16 @@ const directoryTree = require('directory-tree');
 
 function ReadAllAlbums(albumRootPath, excludingFolderNameRegex) {
     AlbumDataBuilder.init(directoryReader, jsonFileReader);
-
-    console.log(excludingFolderNameRegex);
-
     let dirTree = directoryTree(albumRootPath, { exclude: excludingFolderNameRegex });
-
     return AlbumDataBuilder.build(dirTree)
         .then(result => transformRecursively({ albums: result.albums[0].albums } , transformAlbum));
 }
 
 function transformRecursively(rootNode, transformNode) {
     if (rootNode.albums) {
+        if (!rootNode.name)
+            return rootNode.albums.map(x => transformRecursively(x, transformNode));
+
         return {
             ...transformNode(rootNode),
             albums: rootNode.albums.map(x => transformRecursively(x, transformNode))
