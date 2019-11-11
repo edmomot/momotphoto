@@ -6,11 +6,14 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Cleanup">
+    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Fixed routing">
+      <change afterPath="$PROJECT_DIR$/web/src/components/ImageThumbnail.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/AlbumReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumReader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApiRouteConfiguration.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApiRouteConfiguration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ThumbnailCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ThumbnailCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/Album.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Album.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +53,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/ThumbnailCreator.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/src/components" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -58,17 +61,17 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\emomot\Code\momotphoto\web\src\components" />
+      <recent name="C:\Users\emomot\Code\momotphoto\src\web\src\components" />
+      <recent name="R:\Code\momotphoto\test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\emomot\Code\momotphoto\web\public" />
       <recent name="C:\Users\emomot\Code\momotphoto\web\" />
       <recent name="C:\Users\emomot\Code\momotphoto" />
       <recent name="C:\Users\emomot\Code\momotphoto\api" />
       <recent name="R:\Code\momotphoto\src\server" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\emomot\Code\momotphoto\web\src\components" />
-      <recent name="C:\Users\emomot\Code\momotphoto\src\web\src\components" />
-      <recent name="R:\Code\momotphoto\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -190,7 +193,7 @@
       <workItem from="1572984049017" duration="6276000" />
       <workItem from="1573054494579" duration="13864000" />
       <workItem from="1573137417085" duration="25132000" />
-      <workItem from="1573248359007" duration="11026000" />
+      <workItem from="1573248359007" duration="15894000" />
     </task>
     <task id="LOCAL-00001" summary="Recursion and tests working">
       <created>1495421821356</created>
@@ -248,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573488898695</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed routing">
+      <created>1573490950719</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573490950719</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +286,8 @@
     <MESSAGE value="Images appear on album page" />
     <MESSAGE value="Thumbnail generation" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Fixed routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed routing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

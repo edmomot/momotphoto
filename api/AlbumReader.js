@@ -29,15 +29,16 @@ function transformAlbum(album) {
         name: album.name,
         url: (album.path ? convertPathToUrl(album.path) : undefined),
         path: album.path,
-        images: album.images ? album.images.map(transformImage) : undefined
+        images: album.images ? album.images.map(i => transformImage(album, i)) : undefined
     }
 }
 
-function transformImage(image) {
+function transformImage(album, image) {
     return {
         name: image.name,
         url: convertPathToUrl(image.path),
-        path: image.path
+        path: image.path,
+        thumbnail: convertPathToUrl(thumbnail(album, image)),
     }
 }
 
@@ -48,6 +49,10 @@ function convertPathToUrl(path) {
         .filter(x => x !== 'public')
         .map(encodeURI)
         .join('/');
+}
+
+function thumbnail(album, image) {
+    return album.path + '/thumb_200/' + image.name;
 }
 
 module.exports = { ReadAllAlbums };

@@ -23,6 +23,7 @@ function singleAlbumRoute(album) {
     return {
         path: '/' + album.url,
         component: Album,
+        name: album.name,
         props: { album }
     }
 }
