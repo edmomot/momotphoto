@@ -1,15 +1,11 @@
-const AlbumDataBuilder = require('./AlbumDataBuilder');
-const directoryReader = require('./DirectoryReader');
-const jsonFileReader = require('./JsonFileReader');
-const directoryTree = require('directory-tree');
-
+const ThumbnailCreator = require("./ThumbnailCreator");
 const AlbumReader = require('./AlbumReader');
 
 const albumRootPath = './public/albums';
 
 const albumController = {
     GetAllAlbums: (request, response) => {
-        AlbumReader.ReadAllAlbums()
+        AlbumReader.ReadAllAlbums(albumRootPath, ThumbnailCreator.allThumbnailSizesRegex())
             .then(x => response.send(x),
             error => response.status(500).send('Error building directory : ' + error));
     }

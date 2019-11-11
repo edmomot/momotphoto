@@ -1,10 +1,10 @@
 const express = require('express');
-const configureApiRoutes = require('./configureApiRoutes');
+const ApiRouteConfiguration = require('./ApiRouteConfiguration');
 
 const app = express();
 
 app.get('/', (request, response) => response.send("Hello"));
-configureApiRoutes(app);
+ApiRouteConfiguration.configureApiRoutes(app);
 
 const port = 3000;
 

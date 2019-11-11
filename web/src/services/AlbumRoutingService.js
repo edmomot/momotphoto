@@ -6,9 +6,9 @@ function AlbumRoutes(albums) {
 
 function AlbumRoutesRecursive(album) {
     if (album.albums) {
-        if (!album.url) {
-            return album.albums.flatMap(AlbumRoutesRecursive);
-        }
+        // if (!album.url) {
+        //     return album.albums.flatMap(AlbumRoutesRecursive);
+        // }
 
         return [
             singleAlbumRoute(album),

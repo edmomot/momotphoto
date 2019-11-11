@@ -6,10 +6,45 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Added routing to dynamic albums">
+    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Thumbnail generation">
+      <change afterPath="$PROJECT_DIR$/api/ThumbnailCreator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ThumbnailCreator.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/AlbumController.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/AlbumReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/configureApiRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApiRouteConfiguration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/1-20181215-162009-13-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/10-20181215-171255-58-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/11-20181215-172024-63.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/12-20181215-204639-66-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/13-20181215-204647-71-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/14-20181215-204936-96.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/15-20181215-205443-99.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/16-20181216-140059-103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/17-20181216-140209-106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/18-20181216-140349-107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/19-20181216-203150-110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/2-20181215-162038-14-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/20-20181216-203609-122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/21-20181216-204048-124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/3-20181215-162219-21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/4-20181215-165110-32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/5-20181215-165215-34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/6-20181215-170224-48.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/7-20181215-170638-50.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/8-20181215-170813-52.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/9-20181215-171020-53-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/description.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/About.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/Album.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Album.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vue.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +66,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
-    <service-enabled>false</service-enabled>
+    <service-enabled>true</service-enabled>
     <exe-path />
-    <annotation-enable>false</annotation-enable>
-    <other-services-enabled>false</other-services-enabled>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1TD9wG5k4G6m3WkfBKhzyBGNrUz" />
   <component name="ProjectLevelVcsManager">
@@ -45,13 +80,14 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SearchEverywhereHistoryKey" value="var&#9;ACTION&#9;XDebugger.SwitchWatchesInVariables" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/ThumbnailCreator.js" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -80,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.test\Album.test.js">
+  <component name="RunManager" selected="Mocha.Thumbnail creator.Doesn't fail">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -88,6 +124,22 @@
       <tasks />
       <arguments />
       <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Thumbnail creator.Doesn't fail" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/ThumbnailCreator.test.js</test-file>
+      <test-names>
+        <name value="Thumbnail creator" />
+        <name value="Doesn't fail" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="test\AlbumDataBuilder.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
@@ -126,7 +178,7 @@
       <test-file>$PROJECT_DIR$/test/DirectoryReader.test.js</test-file>
       <method v="2" />
     </configuration>
-    <configuration name="test\ExifDataExtractor.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="test\ThumbnailCreator.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -135,35 +187,23 @@
       <ui>bdd</ui>
       <extra-mocha-options />
       <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/test/ExifDataExtractor.test.js</test-file>
-      <method v="2" />
-    </configuration>
-    <configuration name="test\ExifReader.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/test/ExifReader.test.js</test-file>
+      <test-file>$PROJECT_DIR$/test/ThumbnailCreator.test.js</test-file>
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Mocha.test\AlbumDataBuilder.test.js" />
-      <item itemvalue="Mocha.test\ExifReader.test.js" />
-      <item itemvalue="Mocha.test\ExifDataExtractor.test.js" />
       <item itemvalue="Mocha.test\DirectoryReader.test.js" />
       <item itemvalue="Mocha.test\Album.test.js" />
+      <item itemvalue="Mocha.test\ThumbnailCreator.test.js" />
+      <item itemvalue="Mocha.Thumbnail creator.Doesn't fail" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Mocha.Thumbnail creator.Doesn't fail" />
+        <item itemvalue="Mocha.test\ThumbnailCreator.test.js" />
         <item itemvalue="Mocha.test\Album.test.js" />
         <item itemvalue="Mocha.test\AlbumDataBuilder.test.js" />
         <item itemvalue="Mocha.test\DirectoryReader.test.js" />
-        <item itemvalue="Mocha.test\ExifDataExtractor.test.js" />
-        <item itemvalue="Mocha.test\ExifReader.test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +222,8 @@
       <workItem from="1495399166335" duration="16640000" />
       <workItem from="1572984049017" duration="6276000" />
       <workItem from="1573054494579" duration="13864000" />
-      <workItem from="1573137417085" duration="14463000" />
+      <workItem from="1573137417085" duration="25132000" />
+      <workItem from="1573248359007" duration="8813000" />
     </task>
     <task id="LOCAL-00001" summary="Recursion and tests working">
       <created>1495421821356</created>
@@ -219,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573162239166</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Images appear on album page">
+      <created>1573162608728</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573162608728</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +292,8 @@
     <MESSAGE value="Added API server.  Added album controller." />
     <MESSAGE value="Modified api to return URLs instead of local file paths" />
     <MESSAGE value="Added routing to dynamic albums" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added routing to dynamic albums" />
+    <MESSAGE value="Images appear on album page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Images appear on album page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -252,8 +301,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/api/JsonFileReader.js</url>
           <line>9</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/api/AlbumReader.js</url>
+          <line>6</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
