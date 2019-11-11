@@ -7,18 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Thumbnail generation">
-      <change afterPath="$PROJECT_DIR$/api/ThumbnailCreator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ThumbnailCreator.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/AlbumController.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/AlbumReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumReader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/configureApiRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApiRouteConfiguration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ThumbnailCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ThumbnailCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ThumbnailCreator.test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/1-20181215-162009-13-Pano.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/10-20181215-171255-58-Pano.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/11-20181215-172024-63.jpg" beforeDir="false" />
@@ -41,10 +33,6 @@
       <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/8-20181215-170813-52.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/9-20181215-171020-53-Pano.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/albums/Vegas Red Rock/description.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/Album.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Album.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vue.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +211,7 @@
       <workItem from="1572984049017" duration="6276000" />
       <workItem from="1573054494579" duration="13864000" />
       <workItem from="1573137417085" duration="25132000" />
-      <workItem from="1573248359007" duration="8813000" />
+      <workItem from="1573248359007" duration="9459000" />
     </task>
     <task id="LOCAL-00001" summary="Recursion and tests working">
       <created>1495421821356</created>
@@ -267,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573162608728</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Thumbnail generation">
+      <created>1573488300749</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573488300749</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +288,8 @@
     <MESSAGE value="Modified api to return URLs instead of local file paths" />
     <MESSAGE value="Added routing to dynamic albums" />
     <MESSAGE value="Images appear on album page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Images appear on album page" />
+    <MESSAGE value="Thumbnail generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thumbnail generation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

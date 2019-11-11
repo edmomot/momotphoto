@@ -8,7 +8,7 @@ function ReadAllAlbums(albumRootPath, excludingFolderNameRegex) {
 
     console.log(excludingFolderNameRegex);
 
-    let dirTree = directoryTree(albumRootPath, { exclude: excludingFolderNameRegex }, );
+    let dirTree = directoryTree(albumRootPath, { exclude: excludingFolderNameRegex });
 
     return AlbumDataBuilder.build(dirTree)
         .then(result => transformRecursively({ albums: result.albums[0].albums } , transformAlbum));
