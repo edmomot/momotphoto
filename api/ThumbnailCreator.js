@@ -11,7 +11,9 @@ function allThumbnailSizesRegex() {
 
 function createMissingAlbumThumbnails(albumRootPath) {
     albumReader.ReadAllAlbums(albumRootPath, allThumbnailSizesRegex()).then(albums => {
-        for (const album of flattenedAlbums(albums)) {
+        for (const album of flattenedAlbums(albums)[0]) {
+            console.log(JSON.stringify(album));
+
             console.log('album thumbnails being created for ' + album.name);
 
             for (const thumbnailSize of missingThumbnailSizes(album)) {

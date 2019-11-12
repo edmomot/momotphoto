@@ -6,15 +6,86 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Fixed routing">
-      <change afterPath="$PROJECT_DIR$/web/src/components/ImageThumbnail.vue" afterDir="false" />
+    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Thumbnails displayed in album">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/AlbumReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumReader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ThumbnailCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ThumbnailCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/1-20170804-132454-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/10-20170804-140351-58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/11-20170804-140909-59.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/12-20170804-141235-60.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/13-20170804-141425-63.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/14-20170804-141502-65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/15-20170804-141734-67.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/16-20170804-144833-87.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/17-20170805-132245-98.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/18-20170805-134501-107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/19-20170805-134629-111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/2-20170804-132659-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/20-20170805-162313-128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/21-20170805-162528-137.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/22-20170805-183612-139.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/23-20170805-184013-142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/24-20170805-185753-144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/25-20170805-195516-148.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/26-20170805-195736-150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/27-20170805-201007-154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/28-20170805-201217-155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/29-20170805-201808-157.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/3-20170804-132953-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/30-20170805-203250-161.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/31-20170805-203525-163.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/32-20170805-203707-166.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/33-20170805-203800-167.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/34-20170805-204032-170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/35-20170804-144655-69-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/36-20170804-144709-81-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/37-20170804-145213-88-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/4-20170804-133038-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/5-20170804-133116-22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/6-20170804-133621-35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/7-20170804-134221-45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/8-20170804-134256-49.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_200/9-20170804-134343-50.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/1-20170804-132454-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/10-20170804-140351-58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/11-20170804-140909-59.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/12-20170804-141235-60.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/13-20170804-141425-63.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/14-20170804-141502-65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/15-20170804-141734-67.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/16-20170804-144833-87.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/17-20170805-132245-98.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/18-20170805-134501-107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/19-20170805-134629-111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/2-20170804-132659-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/20-20170805-162313-128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/21-20170805-162528-137.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/22-20170805-183612-139.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/23-20170805-184013-142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/24-20170805-185753-144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/25-20170805-195516-148.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/26-20170805-195736-150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/27-20170805-201007-154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/28-20170805-201217-155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/29-20170805-201808-157.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/3-20170804-132953-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/30-20170805-203250-161.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/31-20170805-203525-163.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/32-20170805-203707-166.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/33-20170805-203800-167.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/34-20170805-204032-170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/35-20170804-144655-69-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/36-20170804-144709-81-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/37-20170804-145213-88-Pano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/4-20170804-133038-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/5-20170804-133116-22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/6-20170804-133621-35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/7-20170804-134221-45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/8-20170804-134256-49.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/albums/Linville Gorge/thumb_400/9-20170804-134343-50.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/Album.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Album.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
