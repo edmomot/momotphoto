@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='album'>
         <h2>{{album.name}}</h2>
 
         <h2>Images</h2>
@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style>
-img {
+.album {
+
 }
 </style>
