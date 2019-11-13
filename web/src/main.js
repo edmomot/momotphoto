@@ -7,6 +7,9 @@ import About from './components/About.vue';
 
 import AlbumApiService from './services/AlbumApiService';
 import AlbumRoutingService from "./services/AlbumRoutingService";
+import vuetify from './plugins/vuetify';
+import 'roboto-fontface/css/roboto/roboto-fontface.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 Vue.config.productionTip = false;
 
@@ -25,6 +28,7 @@ AlbumApiService.getAllAlbums().then(allAlbums => {
 
     new Vue({
         router,
+        vuetify,
         render: h => h(App)
     }).$mount('#app');
 });

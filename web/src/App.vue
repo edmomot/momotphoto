@@ -1,46 +1,29 @@
 <template>
-    <div id="app" class='column-container' >
-        <nav-panel class='nav-panel column'></nav-panel>
-        <div class='nav-contents column'>
-            <router-view />
-        </div>
-    </div>
+    <v-app id="inspire">
+        <nav-panel />
+        <v-content>
+            <v-container
+                    class="fill-height"
+                    fluid
+            >
+                <router-view />
+            </v-container>
+        </v-content>
+    </v-app>
 </template>
 
 <script>
 import NavPanel from "./components/NavPanel";
 
 export default {
-    components: {
-        NavPanel
-    }
-}
+  name: 'App',
+
+  components: {
+      NavPanel,
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-    font-family: Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
-
-.nav-panel {
-    width: 260px;
-}
-
-.column {
-    float: left;
-}
-
-.column-container:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.nav-contents {
-
-}
-</style>
