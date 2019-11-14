@@ -21,7 +21,7 @@ function AlbumRoutesRecursive(album) {
 
 function singleAlbumRoute(album) {
     return {
-        path: '/' + album.url,
+        path: album.route + '/',
         component: Album,
         name: album.name,
         props: { album }

@@ -28,6 +28,7 @@ function transformAlbum(album) {
     return {
         name: album.name,
         url: (album.path ? convertPathToUrl(album.path) : undefined),
+        route: (album.path ? convertPathToRoute(album.path) : undefined),
         path: album.path,
         images: album.images ? album.images.map(i => transformImage(album, i)) : undefined
     }
@@ -35,9 +36,8 @@ function transformAlbum(album) {
 
 function transformImage(album, image) {
     return {
-        name: image.name,
+        ...image,
         url: convertPathToUrl(image.path),
-        path: image.path,
         thumbnail: convertPathToUrl(thumbnail(album, image)),
     }
 }
@@ -48,6 +48,14 @@ function convertPathToUrl(path) {
         .filter(x => x !== '..')
         .filter(x => x !== 'public')
         .map(encodeURI)
+        .join('/');
+}
+
+function convertPathToRoute(path) {
+    return '/' + path
+        .split('\\')
+        .filter(x => x !== '..')
+        .filter(x => x !== 'public')
         .join('/');
 }
 

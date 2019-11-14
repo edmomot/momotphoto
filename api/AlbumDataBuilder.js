@@ -1,4 +1,6 @@
 let Promise = require('promise');
+const imageDetailReader = require('./ImageDetailReader');
+const exifMap = require('./ExifMap');
 
 let AlbumDataBuilder = {
     init: function(directoryReader, jsonFileReader) {
@@ -57,11 +59,16 @@ let AlbumDataBuilder = {
 
     buildJpg: function(directoryTreeFile, node, resolve, reject) {
         if (!node.images) node.images = [];
-        node.images.push({
-            name: directoryTreeFile.name,
-            path: directoryTreeFile.path
+
+        imageDetailReader.read(directoryTreeFile.path, imageDetails => {
+            node.images.push({
+                name: directoryTreeFile.name,
+                path: directoryTreeFile.path,
+                ...imageDetails
+            });
+
+            if (resolve) resolve(node);
         });
-        if (resolve) resolve(node);
     }
 };
 

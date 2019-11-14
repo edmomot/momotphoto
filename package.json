@@ -20,6 +20,7 @@
   "devDependencies": {
     "@vue/cli": "^4.0.5",
     "chai": "^3.5.0",
+    "image-size": "^0.8.3",
     "mocha": "^3.2.0",
     "mock-require": "^2.0.1"
   },

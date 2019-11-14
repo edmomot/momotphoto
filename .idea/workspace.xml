@@ -6,10 +6,24 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Masonry layout with Bricks.js and ImagesLoaded">
+    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Smarter resizing, invisible images only on loading and initial repack">
+      <change afterPath="$PROJECT_DIR$/api/ImageDetailReader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/components/NotFound.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/AlbumDataBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumDataBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/AlbumReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ExifDataExtractor.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ExifMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ExifReader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ExifDataExtractor.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ExifDataExtractor.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ExifReader.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ImageDetailReader.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/Album.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Album.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +98,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.Thumbnail creator.Doesn't fail">
+  <component name="RunManager" selected="Mocha.ExifReader.contains caption">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -92,6 +106,53 @@
       <tasks />
       <arguments />
       <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="ExifReader" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/ImageDetailReader.test.js</test-file>
+      <test-names>
+        <name value="ExifReader" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ExifReader.contains caption" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/ImageDetailReader.test.js</test-file>
+      <test-names>
+        <name value="ExifReader" />
+        <name value="contains caption" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ExifReader.contains height" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/ImageDetailReader.test.js</test-file>
+      <test-names>
+        <name value="ExifReader" />
+        <name value="contains height" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="Thumbnail creator.Doesn't fail" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
@@ -110,42 +171,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="test\AlbumDataBuilder.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/test/AlbumDataBuilder.test.js</test-file>
-      <method v="2" />
-    </configuration>
-    <configuration name="test\Album.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/test/Album.test.js</test-file>
-      <method v="2" />
-    </configuration>
-    <configuration name="test\DirectoryReader.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/test/DirectoryReader.test.js</test-file>
-      <method v="2" />
-    </configuration>
     <configuration name="test\ThumbnailCreator.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -159,19 +184,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Mocha.test\AlbumDataBuilder.test.js" />
-      <item itemvalue="Mocha.test\DirectoryReader.test.js" />
-      <item itemvalue="Mocha.test\Album.test.js" />
       <item itemvalue="Mocha.test\ThumbnailCreator.test.js" />
       <item itemvalue="Mocha.Thumbnail creator.Doesn't fail" />
+      <item itemvalue="Mocha.ExifReader" />
+      <item itemvalue="Mocha.ExifReader.contains height" />
+      <item itemvalue="Mocha.ExifReader.contains caption" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Mocha.ExifReader.contains caption" />
+        <item itemvalue="Mocha.ExifReader" />
+        <item itemvalue="Mocha.ExifReader.contains height" />
         <item itemvalue="Mocha.Thumbnail creator.Doesn't fail" />
         <item itemvalue="Mocha.test\ThumbnailCreator.test.js" />
-        <item itemvalue="Mocha.test\Album.test.js" />
-        <item itemvalue="Mocha.test\AlbumDataBuilder.test.js" />
-        <item itemvalue="Mocha.test\DirectoryReader.test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573587448160</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Smarter resizing, invisible images only on loading and initial repack">
+      <created>1573747409529</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573747409529</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +325,8 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Fixed routing" />
     <MESSAGE value="Masonry layout with Bricks.js and ImagesLoaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="Masonry layout with Bricks.js and ImagesLoaded" />
+    <MESSAGE value="Smarter resizing, invisible images only on loading and initial repack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Smarter resizing, invisible images only on loading and initial repack" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

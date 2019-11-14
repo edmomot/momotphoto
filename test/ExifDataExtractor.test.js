@@ -1,7 +1,7 @@
 let chai = require('chai');
 let expect = chai.expect;
 
-let ExifDataExtractorTest = require('../api/ExifDataExtractor');
+let ExifDataExtractorTest = require('../api/ExifMap');
 let ExifDataStub = require('./exif-data-stub.json');
 
 describe('ExifDataExtractor', function() {

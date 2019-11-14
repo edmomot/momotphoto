@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 
 import Home from './components/Home.vue';
 import About from './components/About.vue';
+import NotFound from './components/NotFound.vue';
 
 import AlbumApiService from './services/AlbumApiService';
 import AlbumRoutingService from "./services/AlbumRoutingService";
@@ -15,7 +16,6 @@ Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
 
-
 AlbumApiService.getAllAlbums().then(allAlbums => {
     const albumRoutes = AlbumRoutingService.AlbumRoutes(allAlbums);
 
@@ -24,7 +24,11 @@ AlbumApiService.getAllAlbums().then(allAlbums => {
       { path: '/about', name: 'about', component: About }
     ];
 
-    const router = new VueRouter({ mode: 'history', routes: [...staticRoutes, ...albumRoutes] });
+    const errorRoutes = [
+        { path: '*', component: NotFound }
+    ];
+
+    const router = new VueRouter({ mode: 'history', routes: [...staticRoutes, ...albumRoutes, ...errorRoutes] });
 
     new Vue({
         router,
