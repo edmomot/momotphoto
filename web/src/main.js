@@ -20,8 +20,8 @@ AlbumApiService.getAllAlbums().then(allAlbums => {
     const albumRoutes = AlbumRoutingService.AlbumRoutes(allAlbums);
 
     const staticRoutes = [
-      { path: '/', name: 'home', component: Home, props: { albumRoutes: albumRoutes }},
-      { path: '/about', name: 'about', component: About }
+        { path: '/', name: 'home', component: Home, props: { albumRoutes: albumRoutes }},
+        { path: '/about', name: 'about', component: About }
     ];
 
     const errorRoutes = [
@@ -33,7 +33,7 @@ AlbumApiService.getAllAlbums().then(allAlbums => {
     new Vue({
         router,
         vuetify,
-        render: h => h(App)
+        render: h => h(App , { props: { albums: allAlbums }})
     }).$mount('#app');
 });
 

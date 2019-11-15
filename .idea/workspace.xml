@@ -6,24 +6,13 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Smarter resizing, invisible images only on loading and initial repack">
-      <change afterPath="$PROJECT_DIR$/api/ImageDetailReader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/components/NotFound.vue" afterDir="false" />
+    <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Added full size image view with photoswipe. Fixed routing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/AlbumDataBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumDataBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/AlbumReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AlbumReader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ExifDataExtractor.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ExifMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ExifReader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ExifDataExtractor.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ExifDataExtractor.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ExifReader.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ImageDetailReader.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/Album.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Album.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/NavPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/NavPanel.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/services/AlbumRoutingService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/routes.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -295,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573747409529</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added full size image view with photoswipe. Fixed routing.">
+      <created>1573768193037</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573768193037</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +322,8 @@
     <MESSAGE value="Fixed routing" />
     <MESSAGE value="Masonry layout with Bricks.js and ImagesLoaded" />
     <MESSAGE value="Smarter resizing, invisible images only on loading and initial repack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Smarter resizing, invisible images only on loading and initial repack" />
+    <MESSAGE value="Added full size image view with photoswipe. Fixed routing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added full size image view with photoswipe. Fixed routing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

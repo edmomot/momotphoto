@@ -1,9 +1,5 @@
 <template>
     <div class='album'>
-        <h2>{{album.name}}</h2>
-
-        <h2>Images</h2>
-
         <div :class="[imageContainerClass, { 'loading-images': loadingImages}]">
             <img v-for='(image, index) in album.images'
                  v-bind:key='image.name'
@@ -48,22 +44,27 @@ export default {
         }
     },
     mounted: function () {
+        const gutter = 2;
         this.bricksInstance = Bricks({
             container: this.imageContainerSelector,
             packed: 'data-packed',
             sizes: [
-                { columns: 2, gutter: 1 },
-                { mq: '800px', columns: 3, gutter: 1 },
-                ...this.range(1000, 1920 * 2, 200).map(size => ({ mq: size + 'px', columns: Math.floor((size - 250) / 200), gutter: 1 }))
+                { columns: 1, gutter },
+                { mq: '400px', columns: 2, gutter },
+                { mq: '600px', columns: 3, gutter },
+                { mq: '800px', columns: 4, gutter },
+                ...this.range(1200, 1920 * 2, 200).map(size => ({ mq: size + 'px', columns: Math.floor((size - 250) / 200), gutter }))
             ],
             position: false
         });
 
         this.bricksInstance.resize(true);
-
-        ImagesLoaded(this.imageContainerSelector, () => {
-            this.bricksInstance.pack();
-            this.loadingImages = false;
+        this.packImagesAfterLoad();
+    },
+    beforeRouteEnter: function(to, from, next) {
+        next(vm => {
+            vm.loadingImages = true;
+            vm.packImagesAfterLoad();
         });
     },
     methods: {
@@ -76,6 +77,12 @@ export default {
         },
         hideFullSizeImage: function () {
             this.fullSizeImageOpen = false;
+        },
+        packImagesAfterLoad: function() {
+            ImagesLoaded(this.imageContainerSelector, () => {
+                this.bricksInstance.pack();
+                this.loadingImages = false;
+            });
         }
     },
     components: {
@@ -92,9 +99,15 @@ export default {
 .image-container {
     margin: auto;
     opacity: 1;
+    transition: opacity 200ms;
 }
 
 .image-container.loading-images {
     opacity: 0;
+    transition: opacity 0s; /* transition to full opacity immediately */
+}
+
+img {
+    border-radius: 4px;
 }
 </style>
