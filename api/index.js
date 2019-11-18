@@ -1,10 +1,14 @@
 const express = require('express');
 const ApiRouteConfiguration = require('./ApiRouteConfiguration');
+const history = require('connect-history-api-fallback');
+const path = require('path');
 
 const app = express();
 
-app.get('/', (request, response) => response.send("Hello"));
 ApiRouteConfiguration.configureApiRoutes(app);
+
+app.use(express.static(path.join(__dirname, '../web/dist')));
+app.use('/', history());
 
 const port = 3000;
 

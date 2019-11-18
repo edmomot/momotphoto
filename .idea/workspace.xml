@@ -8,11 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7839a76d-93cb-4c78-a415-7eec5f245478" name="Default" comment="Added full size image view with photoswipe. Fixed routing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/Album.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Album.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/NavPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/NavPanel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ApiRouteConfiguration.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApiRouteConfiguration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,6 +205,7 @@
       <workItem from="1573054494579" duration="13864000" />
       <workItem from="1573137417085" duration="25132000" />
       <workItem from="1573248359007" duration="15894000" />
+      <workItem from="1574090983855" duration="2079000" />
     </task>
     <task id="LOCAL-00001" summary="Recursion and tests working">
       <created>1495421821356</created>
