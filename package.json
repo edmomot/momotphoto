@@ -4,7 +4,7 @@
   "description": "Photography Site",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm install -g @vue/cli",
+    "postinstall": "npm install --prefix web",
     "test": "test",
     "start": "npm run --prefix web build && cd web && node ../api/index.js"
   },
