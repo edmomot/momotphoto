@@ -8,7 +8,7 @@ const app = express();
 ApiRouteConfiguration.configureApiRoutes(app);
 
 app.use(express.static(path.join(__dirname, '../web/dist')));
-app.use('/', history());
+app.use(history());
 
 const port = process.env.PORT || 3000;
 

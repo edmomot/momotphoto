@@ -7,9 +7,9 @@
   "description": "Photography Site",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm install --prefix web",
+    "postinstall": "npm install --prefix web && npm run --prefix web build",
     "test": "test",
-    "start": "npm run --prefix web build && cd web && node ../api/index.js"
+    "start": "cd web && node ../api/index.js"
   },
   "repository": {
     "type": "git",

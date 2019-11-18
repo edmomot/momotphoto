@@ -44,7 +44,7 @@ function transformImage(album, image) {
 
 function convertPathToUrl(path) {
     return '/' + path
-        .split('\\')
+        .split(/\\|\//)
         .filter(x => x !== '..')
         .filter(x => x !== 'public')
         .map(encodeURI)
@@ -53,7 +53,7 @@ function convertPathToUrl(path) {
 
 function convertPathToRoute(path) {
     return '/' + path
-        .split('\\')
+        .split(/\\|\//)
         .filter(x => x !== '..')
         .filter(x => x !== 'public')
         .join('/');
