@@ -1,5 +1,5 @@
-const apiRouteConfiguration = require('../api/ApiRouteConfiguration');
-const thumbnailCreator = require('../api/ThumbnailCreator');
+const apiRouteConfiguration = require('./api/ApiRouteConfiguration');
+const thumbnailCreator = require('./api/ThumbnailCreator');
 
 module.exports = {
     devServer: {
