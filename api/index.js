@@ -1,11 +1,8 @@
 const express = require('express');
-const ApiRouteConfiguration = require('./ApiRouteConfiguration');
 const history = require('connect-history-api-fallback');
 const path = require('path');
 
 const app = express();
-
-ApiRouteConfiguration.configureApiRoutes(app);
 
 app.use(history());
 app.use(express.static(path.join(__dirname, '../dist')));

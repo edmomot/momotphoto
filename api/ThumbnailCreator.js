@@ -2,24 +2,16 @@ const fs = require('fs');
 const path = require('path');
 const nodeThumbnail = require('node-thumbnail');
 const albumReader = require('../api/AlbumReader');
-
-const thumbnailSizes = [ 200, 400 ];
-
-function allThumbnailSizesRegex() {
-    return new RegExp(thumbnailSizes.map(thumbnailSubFolder).join('|'));
-}
+const thumbnailConfiguration = require('./ThumbnailConfiguration');
 
 function createMissingAlbumThumbnails(albumRootPath) {
-    albumReader.ReadAllAlbums(albumRootPath, allThumbnailSizesRegex()).then(albums => {
+    albumReader.ReadAllAlbums(albumRootPath, thumbnailConfiguration.allThumbnailSizesRegex()).then(albums => {
         for (const album of flattenedAlbums(albums)[0]) {
-            console.log(JSON.stringify(album));
-
-            console.log('album thumbnails being created for ' + album.name);
-
             for (const thumbnailSize of missingThumbnailSizes(album)) {
                 createDirectoryIfMissing(albumThumbnailSubFolder(thumbnailSize, album));
 
                 console.log('Creating ' + thumbnailSize + 'px size thumbnails for album ' + album.path);
+
                 nodeThumbnail.thumb({
                     source: fullPath(album.path),
                     destination: albumThumbnailSubFolder(thumbnailSize, album),
@@ -67,11 +59,7 @@ function fullPath(pathRelativeToFile) {
 }
 
 function albumThumbnailSubFolder(thumbnailSize, album) {
-    return path.join(fullPath(album.path), thumbnailSubFolder(thumbnailSize))
+    return path.join(fullPath(album.path), thumbnailConfiguration.thumbnailSubFolder(thumbnailSize))
 }
 
-function thumbnailSubFolder(thumbnailSize) {
-    return 'thumb_' + thumbnailSize;
-}
-
-module.exports = { createMissingAlbumThumbnails, allThumbnailSizesRegex };
+createMissingAlbumThumbnails('./public/albums');
