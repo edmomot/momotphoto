@@ -1,12 +1,5 @@
 <template>
-    <v-app id="inspire">
-        <nav-panel :albums="albums" />
-        <v-content class="blue-grey lighten-5">
-            <v-container fluid>
-                <router-view />
-            </v-container>
-        </v-content>
-    </v-app>
+    <nav-panel :albums="albums" />
 </template>
 
 <script>

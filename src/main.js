@@ -8,9 +8,20 @@ import NotFound from './components/NotFound.vue';
 import AlbumRoutingService from "./services/AlbumRoutingService";
 import albumCollection from '../albums.json';
 
-import vuetify from './plugins/vuetify';
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
+import { MdToolbar, MdButton, MdIcon, MdDrawer, MdList, MdContent } from 'vue-material/dist/components'
+
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+
+
+Vue.use(MdToolbar);
+Vue.use(MdButton);
+Vue.use(MdIcon);
+Vue.use(MdDrawer);
+Vue.use(MdList);
+Vue.use(MdContent);
 
 Vue.config.productionTip = false;
 
@@ -33,7 +44,6 @@ const router = new VueRouter({ mode: 'history', routes: [...staticRoutes, ...alb
 
 new Vue({
     router,
-    vuetify,
     render: h => h(App , { props: { albums: albums }})
 }).$mount('#app');
 
