@@ -110,4 +110,8 @@ export default {
 img {
     border-radius: 4px;
 }
+
+.pswp {
+    z-index: 1000;
+}
 </style>

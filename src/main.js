@@ -10,7 +10,7 @@ import albumCollection from '../albums.json';
 
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
-import { MdToolbar, MdButton, MdIcon, MdDrawer, MdList, MdContent } from 'vue-material/dist/components'
+import { MdToolbar, MdButton, MdIcon, MdDrawer, MdList, MdContent, MdApp } from 'vue-material/dist/components'
 
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
@@ -22,6 +22,7 @@ Vue.use(MdIcon);
 Vue.use(MdDrawer);
 Vue.use(MdList);
 Vue.use(MdContent);
+Vue.use(MdApp);
 
 Vue.config.productionTip = false;
 
