@@ -1,0 +1,68 @@
+{
+  "image": {
+    "ImageDescription": "bird on reeds",
+    "Make": "Canon",
+    "Model": "Canon EOS 60D",
+    "Orientation": 1,
+    "XResolution": 240,
+    "YResolution": 240,
+    "ResolutionUnit": 2,
+    "Software": "Adobe Photoshop Lightroom 6.0 (Windows)",
+    "ModifyDate": "2016:04:24 23:01:38",
+    "Artist": "Ed Momot",
+    "Copyright": "Copyright 2016 Ed Momot",
+    "ExifOffset": 2386,
+    "XPTitle": [ 98, 0, 105, 0, 114, 0, 100, 0, 32, 0, 111, 0, 110, 0, 32, 0, 114, 0, 101, 0, 101, 0, 100, 0, 115, 0, 0, 0]
+  },
+  "thumbnail": {
+    "Compression": 6,
+    "XResolution": 72,
+    "YResolution": 72,
+    "ResolutionUnit": 2,
+    "ThumbnailOffset": 5140,
+    "ThumbnailLength": 8043
+  },
+  "exif": {
+    "ExposureTime": 0.0008,
+    "FNumber": 7.1,
+    "ExposureProgram": 1,
+    "ISO": 1000,
+    "SensitivityType": 2,
+    "RecommendedExposureIndex": 1000,
+    "ExifVersion": {
+      "type": "Buffer",
+      "data": [48, 50, 51, 48 ]
+    },
+    "DateTimeOriginal": "2016:04:24 15:43:11",
+    "CreateDate": "2016:04:24 15:43:11",
+    "ShutterSpeedValue": 10.287712,
+    "ApertureValue": 5.655638,
+    "ExposureCompensation": 0,
+    "MaxApertureValue": 5,
+    "MeteringMode": 2,
+    "Flash": 16,
+    "FocalLength": 300,
+    "SubSecTimeOriginal": "88",
+    "SubSecTimeDigitized": "88",
+    "ColorSpace": 1,
+    "FocalPlaneXResolution": 5728.176795580111,
+    "FocalPlaneYResolution": 5808.403361344538,
+    "FocalPlaneResolutionUnit": 2,
+    "CustomRendered": 0,
+    "ExposureMode": 1,
+    "WhiteBalance": 1,
+    "SceneCaptureType": 0,
+    "SerialNumber": "1571026686",
+    "LensInfo": [
+      70,
+      300,
+      null,
+      null
+    ],
+    "LensModel": "EF70-300mm f/4-5.6 IS USM",
+    "LensSerialNumber": "000042006b"
+  },
+  "gps": {},
+  "interoperability": {},
+  "makernote": {}
+}
