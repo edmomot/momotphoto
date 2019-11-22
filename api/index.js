@@ -2,8 +2,11 @@ const express = require('express');
 const history = require('connect-history-api-fallback');
 const path = require('path');
 const compression = require('compression');
+const apiCache = require('apicache');
 
 const app = express();
+
+app.use(apiCache.middleware('3 days'));
 
 app.use(compression());
 
