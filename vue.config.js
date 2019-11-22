@@ -1,6 +1,6 @@
 module.exports = {
-    devServer: {
-        before: app => {
-        }
-    }
-};
+  "devServer": {},
+  "transpileDependencies": [
+    "vuetify"
+  ]
+}
