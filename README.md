@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Heroku setup before build
+`heroku config:set NPM_CONFIG_PRODUCTION=false -a momotphoto-test`
