@@ -1,6 +1,9 @@
 # Generated albums file
 albums.json
 
+# Generated thumbnail images
+thumb_*/
+
 # Logs
 logs
 *.log
