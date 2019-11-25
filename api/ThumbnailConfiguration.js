@@ -1,5 +1,5 @@
 
-const thumbnailSizes = [ 200, 400 ];
+const thumbnailSizes = [ 200 ];
 
 function allThumbnailSizesRegex() {
     return new RegExp(thumbnailSizes.map(thumbnailSubFolder).join('|'));

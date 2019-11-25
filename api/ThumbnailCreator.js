@@ -1,25 +1,23 @@
 const fs = require('fs');
 const path = require('path');
-const nodeThumbnail = require('node-thumbnail');
+const sharp = require('sharp');
 const albumReader = require('../api/AlbumReader');
 const thumbnailConfiguration = require('./ThumbnailConfiguration');
 
 function createMissingAlbumThumbnails(albumRootPath) {
     albumReader.ReadAllAlbums(albumRootPath, thumbnailConfiguration.allThumbnailSizesRegex()).then(albums => {
         for (const album of flattenedAlbums(albums)[0]) {
-            for (const thumbnailSize of missingThumbnailSizes(album)) {
-                createDirectoryIfMissing(albumThumbnailSubFolder(thumbnailSize, album));
+            fs.readdir(album.path, (error, albumPathFiles) => {
+                for (const thumbnailSize of missingThumbnailSizes(album, albumPathFiles)) {
+                    console.log('Creating ' + thumbnailSize + 'px size thumbnails for album ' + album.path);
 
-                console.log('Creating ' + thumbnailSize + 'px size thumbnails for album ' + album.path);
+                    createDirectory(albumThumbnailSubFolder(thumbnailSize, album));
 
-                nodeThumbnail.thumb({
-                    source: fullPath(album.path),
-                    destination: albumThumbnailSubFolder(thumbnailSize, album),
-                    width: thumbnailSize,
-                    ignore: 'true',
-                    suffix: ''
-                })
-            }
+                    for (const partialImagePath of partialImagePaths(albumPathFiles)) {
+                        createThumbnail(album, partialImagePath, thumbnailSize);
+                    }
+                }
+            });
         }
     });
 }
@@ -38,20 +36,40 @@ function flattenedAlbums(album) {
     return [ album ];
 }
 
-function missingThumbnailSizes(album) {
-    return thumbnailSizes
-        .filter(thumbnailSize => thumbnailSizeMissing(thumbnailSize, album));
+function createThumbnail(album, partialImagePath, thumbnailSize) {
+    sharp(fullImagePath(album, partialImagePath))
+        .resize({width: thumbnailSize})
+        .jpeg({
+            quality: 60
+        })
+        .sharpen(1, 0, 1)
+        .toFile(imageThumbnailDestination(album, thumbnailSize, partialImagePath))
+        .catch(imageError => console.log("Error creating thumbnail: " + JSON.stringify(imageError)));
 }
 
-function thumbnailSizeMissing(thumbnailSize, album) {
-    return !fs.existsSync(albumThumbnailSubFolder(thumbnailSize, album));
+function partialImagePaths(albumPathFiles) {
+    return albumPathFiles.filter(path => path.endsWith('.jpg'));
 }
 
-function createDirectoryIfMissing(directory) {
-    if (!fs.existsSync(directory)) {
-        console.log('Creating missing directory: ' + directory);
-        fs.mkdirSync(directory);
-    }
+function fullImagePath(album, partialImagePath) {
+    return path.join(album.path, partialImagePath);
+}
+
+function imageThumbnailDestination(album, thumbnailSize, imagePath) {
+    return path.join(albumThumbnailSubFolder(thumbnailSize, album), imagePath);
+}
+
+function missingThumbnailSizes(album, albumPathFiles) {
+    return thumbnailConfiguration.thumbnailSizes
+        .filter(thumbnailSize => thumbnailSizeMissing(thumbnailSize, albumPathFiles));
+}
+
+function thumbnailSizeMissing(thumbnailSize, albumPathFiles) {
+    return !albumPathFiles.includes(thumbnailConfiguration.thumbnailSubFolder(thumbnailSize));
+}
+
+function createDirectory(directory) {
+    fs.mkdirSync(directory);
 }
 
 function fullPath(pathRelativeToFile) {
