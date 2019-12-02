@@ -38,9 +38,9 @@ function flattenedAlbums(album) {
 
 function createThumbnail(album, partialImagePath, thumbnailSize) {
     sharp(fullImagePath(album, partialImagePath))
-        .resize({width: thumbnailSize})
+        .resize({ width: thumbnailSize })
         .jpeg({
-            quality: 60
+            quality: 80
         })
         .sharpen(1, 0, 1)
         .toFile(imageThumbnailDestination(album, thumbnailSize, partialImagePath))
