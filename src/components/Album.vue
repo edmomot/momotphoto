@@ -113,8 +113,6 @@ export default {
                 });
             };
 
-            //setTimeout(loadRemainingImages, 2000);
-
             this.$nextTick(loadRemainingImages);
         },
         mapImageToFullScreenImageData: function (image) {
@@ -136,7 +134,7 @@ export default {
     margin: auto;
 }
 
-img {
+.image-container > img {
     border-radius: 4px;
 
     /* loading */
@@ -144,7 +142,7 @@ img {
     transition: opacity 0s; /* transition to full opacity immediately */
 }
 
-img[data-packed] {
+.image-container > img[data-packed] {
     /* loaded */
     opacity: 1;
     transition: opacity 200ms;
