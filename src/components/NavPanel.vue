@@ -1,6 +1,6 @@
 <template>
 <div>
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer v-model="drawer" app :mobile-break-point="mobileBreakPoint">
         <v-list dense>
             <v-list-item link :to="{ path: '/' }" >
                 <v-list-item-action>
@@ -41,8 +41,12 @@
 export default {
     props: { 'albums': Array },
     data: () => ({
-        drawer: true
+        mobileBreakPoint: 1264,
+        drawer: false,
     }),
+    mounted: function () {
+        this.drawer = this.mobileBreakPoint <= window.innerWidth;
+    },
     computed: {
         pageTitle: function() {
             return this.$route.name;
