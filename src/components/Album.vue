@@ -39,6 +39,30 @@ const typicalImageHeight =
     tallImageHeightPixels * percentageOfImagesThatAreTall +
     shortImageHeightPixels * (1 - percentageOfImagesThatAreTall);
 
+const horizontalContainerPaddingPixels = 12;
+const navigationDrawerWidthPixels = 256;
+const mobileBreakPoint = 1264;
+const qHdResolutionWidth = 1920 * 2;
+const scrollBarWidthPixels = 7;
+const gutter = 1;
+
+function range(start, end, step) {
+    return [...Array(Math.floor((end - start) / step)).keys()].map(i => i * step + start);
+}
+
+function numberOfColumnsWithoutDrawer(size) {
+    return Math.floor((size - scrollBarWidthPixels) / imageWidth);
+}
+
+function numberOfColumnsWithDrawer(size) {
+    return Math.floor((size - navigationDrawerWidthPixels - scrollBarWidthPixels) / imageWidth);
+}
+
+const allSizes = range(imageWidth + horizontalContainerPaddingPixels, mobileBreakPoint + horizontalContainerPaddingPixels, imageWidth + gutter)
+    .map(size => ({ mq: (size) + 'px', columns: numberOfColumnsWithoutDrawer(size), gutter }))
+    .concat(range(mobileBreakPoint + horizontalContainerPaddingPixels, qHdResolutionWidth + horizontalContainerPaddingPixels, imageWidth + gutter)
+        .map(size => ({ mq: size + 'px', columns: numberOfColumnsWithDrawer(size), gutter })));
+
 export default {
     props: {
         album: Object
@@ -76,17 +100,10 @@ export default {
     },
     beforeRouteEnter: function(to, from, next) {
         next(vm => {
-            const gutter = 2;
             vm.bricksInstance = Bricks({
                 container: vm.imageContainerSelector,
                 packed: 'data-packed',
-                sizes: [
-                    { columns: 1, gutter },
-                    { mq: '400px', columns: 2, gutter },
-                    { mq: '600px', columns: 3, gutter },
-                    { mq: '800px', columns: 4, gutter },
-                    ...vm.range(1200, 1920 * 2, imageWidth).map(size => ({ mq: size + 'px', columns: Math.floor((size - 250) / imageWidth), gutter }))
-                ],
+                sizes: allSizes,
                 position: false
             });
 
@@ -97,9 +114,6 @@ export default {
     methods: {
         numberOfImagesToLoadInitially: function () {
             return Math.floor((window.innerHeight * window.innerWidth) / (imageWidth * typicalImageHeight));
-        },
-        range: function (start, end, step) {
-            return [...Array(Math.floor((end - start) / step)).keys()].map(i => i * step + start);
         },
         showFullSizeImage: function (image, index) {
             this.fullSizeImageOpen = true;
@@ -147,8 +161,6 @@ export default {
 }
 
 .image-container > img {
-    border-radius: 4px;
-
     /* loading */
     opacity: 0;
     transition: opacity 0s; /* transition to full opacity immediately */
