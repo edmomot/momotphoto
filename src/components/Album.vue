@@ -30,6 +30,15 @@ import Bricks from 'bricks.js';
 import ImagesLoaded from 'imagesloaded';
 import { PhotoSwipe } from 'v-photoswipe'
 
+const imageWidth = 200;
+const tallImageHeightPixels = 300;
+const shortImageHeightPixels = 133;
+const percentageOfImagesThatAreTall = 0.33;
+
+const typicalImageHeight =
+    tallImageHeightPixels * percentageOfImagesThatAreTall +
+    shortImageHeightPixels * (1 - percentageOfImagesThatAreTall);
+
 export default {
     props: {
         album: Object
@@ -49,10 +58,10 @@ export default {
             return '.' + this.imageContainerClass;
         },
         imagesAboveTheFold: function () {
-            return this.album.images.slice(0, 8);
+            return this.album.images.slice(0, this.numberOfImagesToLoadInitially());
         },
         imagesBelowTheFold: function() {
-            return this.album.images.slice(8);
+            return this.album.images.slice(this.numberOfImagesToLoadInitially());
         },
         fullScreenImages: function () {
             return this.album.images.map(this.mapImageToFullScreenImageData);
@@ -76,7 +85,7 @@ export default {
                     { mq: '400px', columns: 2, gutter },
                     { mq: '600px', columns: 3, gutter },
                     { mq: '800px', columns: 4, gutter },
-                    ...vm.range(1200, 1920 * 2, 200).map(size => ({ mq: size + 'px', columns: Math.floor((size - 250) / 200), gutter }))
+                    ...vm.range(1200, 1920 * 2, imageWidth).map(size => ({ mq: size + 'px', columns: Math.floor((size - 250) / imageWidth), gutter }))
                 ],
                 position: false
             });
@@ -86,6 +95,9 @@ export default {
         });
     },
     methods: {
+        numberOfImagesToLoadInitially: function () {
+            return Math.floor((window.innerHeight * window.innerWidth) / (imageWidth * typicalImageHeight));
+        },
         range: function (start, end, step) {
             return [...Array(Math.floor((end - start) / step)).keys()].map(i => i * step + start);
         },
