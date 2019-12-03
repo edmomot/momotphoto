@@ -25,6 +25,10 @@ export default {
 </script>
 
 <style>
+    .v-application, .title {
+        font-family: Arial, sans-serif !important;
+
+    }
 
     .color-primary-0 { background-color: #2C426B }	/* Main Primary color */
     .color-primary-1 { background-color: #B4BED0 }
