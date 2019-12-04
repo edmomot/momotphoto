@@ -10,6 +10,7 @@
     "build-album-json": "node api/AlbumFileGenerator.js",
     "create-thumbnails": "node api/ThumbnailCreator.js",
     "pre-build": "npm run build-album-json && npm run create-thumbnails",
+    "build-and-start": "npm run build && npm run start",
     "start": "node api/index.js",
     "test": "test"
   },

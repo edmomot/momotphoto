@@ -55,9 +55,14 @@ function mapExifData(exifResult) {
 
 let ImageDetailReader = {
     read: function(path, onSuccess, onFailure) {
+        return readSize(path)
+            .then(onSuccess)
+            .catch(onFailure);
+    },
+    readWithExif: function(path, onSuccess, onFailure) {
         let exif = readExif(path);
         let size = readSize(path);
-        
+
         return Promise.all([exif, size])
             .then(values => onSuccess(({ ...values[0], ...values[1] })))
             .catch(onFailure);

@@ -27,7 +27,6 @@ export default {
 <style>
     .v-application, .title {
         font-family: Arial, sans-serif !important;
-
     }
 
     .color-primary-0 { background-color: #2C426B }	/* Main Primary color */

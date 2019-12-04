@@ -31,7 +31,17 @@
         </v-list>
     </v-navigation-drawer>
     <v-app-bar color="indigo darken-2" app dark>
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+        <!-- v-app-bar-nav-icon is replaced with the component's contents because it has a dependency on the mdi icons,
+        which causes the font file to be loaded twice  -->
+        <button aria-label="Menu Toggle"
+                type="button"
+                @click.stop="drawer = !drawer"
+                class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default">
+            <span class="v-btn__content">
+                <i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i>
+            </span>
+        </button>
+
         <v-toolbar-title>{{pageTitle}}</v-toolbar-title>
     </v-app-bar>
 </div>

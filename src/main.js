@@ -10,8 +10,6 @@ import albumCollection from '../albums.json';
 
 import vuetify from './plugins/vuetify';
 
-import '@mdi/font/css/materialdesignicons.css'
-
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
